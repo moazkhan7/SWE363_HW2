@@ -1,4 +1,12 @@
+#header{
+    overflow: auto;
+}
+
 #logo{
     width: 100px;
     height: 100px;
+}
+
+#quiz_menu{
+    width: 200px;
 }
