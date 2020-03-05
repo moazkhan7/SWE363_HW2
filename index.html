@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Choose your quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
+
     <script src="main.js"></script>
 </head>
+
 <body>
     <header id="header">
         <img src="kfupm_logo.svg" id="logo">
@@ -17,5 +19,23 @@
             <option value="quiz1">Quiz 1</option>
         </select>
     </header>
+
+    <br>
+    <form id="contact_details" onsubmit="return validateForm();">
+        <label class="description" for="name">Name: </label>
+        <div>
+            <input oninput="checkName()" id="name" name="name" type="text" maxlength="255" value="" />
+            <p class="err hide">Name input has an error! Please make sure it's correct.</p>
+        </div>
+        
+        <label class="description" for="email">Email: </label>
+        <div>
+            <input onblur="checkEmail()" id="email" name="email" type="text" maxlength="255" value="" />
+            <div class="err hide">Email input has an error! Please make sure it's correct.</div>
+        </div>
+        <br>
+        <input type="button" value="Start Quiz">
+    </form>
 </body>
+
 </html>
