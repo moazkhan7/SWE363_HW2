@@ -11,10 +11,13 @@
     width: 200px;
 }
 
+
+
 .hide{
     display: none;
 }
 
 .err{
     color: red;
+    clear: both;
 }

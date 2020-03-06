@@ -7,7 +7,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
 var student = {
-    name: "",
+    kfupm_id: "",
     email: ""
 };
 
@@ -25,18 +25,18 @@ function validateForm() {
     return valid;
 }
 
-function checkName() {
-    var name = $('#name').val();
-    var nameTest = new RegExp(/^[a-zA-Z ]{2,30}$/);
-    var nameResult = nameTest.test(name);
+function checkID() {
+    var id = $('#KFUPM_ID').val();
+    var idTest = new RegExp(/^([sg]{1})([0-9]{9})$/);
+    var idResult = idTest.test(id);
 
-    if (nameResult == false) {
-        $('#name').next().removeClass("hide")
+    if (idResult == false) {
+        $('#KFUPM_ID').next().removeClass("hide")
     }
     else {
-        $('#name').next().addClass("hide")
+        $('#KFUPM_ID').next().addClass("hide")
 
-        student.name = name;
+        student.kfupm_id = id;
 
         return true;
     }
@@ -59,4 +59,17 @@ function checkEmail() {
         return true;
     }
 
+}
+
+var quiz = {
+    quizNumber: 0
+};
+
+function checkQuizSelection() {
+    if ($('#quiz_menu').val() == "0")
+        $('#quiz_menu').next().removeClass("hide");
+    else
+        $('#quiz_menu').next().addClass("hide");
+
+    quiz.quizNumber = $('#items option:selected').value();
 }
