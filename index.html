@@ -18,7 +18,7 @@
     </header>
 
     <br>
-    <form id="form" onsubmit="return validateForm();">
+    <form id="form" onsubmit="validateForm();">
         <select id="quiz_menu" onchange="checkQuizSelection();">
             <option value="0">--Select a quiz--</option>
             <option value="1">Quiz 1</option>
@@ -41,7 +41,7 @@
         </div>
         
         <br>
-        <input type="button" value="Start Quiz">
+        <input type="button" value="Start Quiz" onclick="validateForm();">
     </form>
 </body>
 

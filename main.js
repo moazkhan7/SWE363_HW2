@@ -5,8 +5,6 @@ var student = {
 
 // 
 function validateForm() {
-    checkName();
-    checkEmail();
     var valid = true;
     $(".err").each(function (index) {
         if (!$(this).hasClass("hide"))
@@ -14,7 +12,9 @@ function validateForm() {
             //  valid = false;
             valid = false;
     });
-    return valid;
+    if (valid){
+        window.location.href = 'mcq.html';
+    }
 }
 
 function checkID() {
