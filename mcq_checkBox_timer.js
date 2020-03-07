@@ -31,5 +31,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    startTimer(60 * 5, document.querySelector('#timer'));
+    var tenMinutes = 60 * 10,
+        display = document.querySelector('#timer');
+    startTimer(tenMinutes, display);
 };
